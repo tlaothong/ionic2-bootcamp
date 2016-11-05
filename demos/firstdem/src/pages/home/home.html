@@ -6,12 +6,17 @@
 
 <ion-content padding>
   <h2>Welcome to <ion-icon name="heart"></ion-icon> Group Lease!</h2>
+  <h3>
+    {{johnDoe.first}}
+  </h3>
+  <input [(ngModel)]="johnDoe.last" />
+  <ion-input type="text" value="" [(ngModel)]="johnDoe.occupation"></ion-input>
   <p>
     This starter project comes with simple tabs-based layout for apps
     that are going to primarily use a Tabbed UI.
   </p>
   <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-  <button ion-button (click)="showAlert()">Default</button>
+  <button ion-button (click)="showAlert()" [color]="isOccupationNA()">Default</button>
   <ion-card>
     <img src="assets/img/nin-live.png"/>
     <ion-card-content>
@@ -24,8 +29,10 @@
       </p>
     </ion-card-content>
   </ion-card>  
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-item-group *ngFor="let item of albums">
+    <ion-item-divider light>A</ion-item-divider>
+    <ion-item>{{item.album}}</ion-item>
+    <ion-item>{{item.year}}</ion-item>
+  </ion-item-group>
+
 </ion-content>
