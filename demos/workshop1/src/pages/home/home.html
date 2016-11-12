@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  The world is your oyster.
+  // Emmet
+  <input type="text" [(ngModel)]="firstName">
+  <input type="text" [(ngModel)]="firstName">
+  <br />
+  {{firstName}}
+  {{lastName}}
+  <button ion-button full (click)="ShowName()">Alert</button>
+  <img [src]="imageUrl" alt="">
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+</ion-content>
