@@ -21,6 +21,13 @@ export class HomePage {
     this.http.get(url).subscribe(rsp => {
       this.items = rsp.json();
     });
+    // this.http.post('http://sample.com/new-album.php?id=20', {
+    //   first: 'John',
+    //   last: 'Doe',
+    //   birthDate: '2016-11-20'
+    // }).subscribe(rsp => {
+
+    // });
   }
 
 }
